@@ -1,33 +1,383 @@
-.App {
-  text-align: center;
+.wrapper {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FFFFFF;
+}
+.header_container {
+    position: relative;
+    left: 0%;
+    right: 0%;
+    height: 76px;
+    margin-top: 15px;
+}
+.separator {
+    left: 0%;
+    right: 0%;
+    border: 1px solid #E5E5E5;
+}
+.logo {
+    position: absolute;
+    left: 1.67%;
+    right: 83.58%;
+    height: 33px;
+    top:9px;    
+}
+.logo>.text {
+    position: absolute;
+    height: 25px;
+    left: 21.69%;
+    /* right: 83.58%;
+    top: calc(50% - 25px/2 - 471.5px); */
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    /* identical to box height */
+
+    color: #5A5A5A;
+}
+.logo>.icon {
+    position: absolute;
+    left: 1.67%;
+    right: 95.9%;
+    top: 2.34%;
+    bottom: 94.43%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.add_question_btn {
+    position: absolute;
+    left: 84.86%;
+    right: 2.71%;
+    top: 1.46%;
+    bottom: 93.85%;
+    height: 48px;
+    width: 179px;
+    background: #002CFC;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 24.5px;
+}
+.add_question_icon {
+   margin-right: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Sidebar */
+.sidebar {
+    position: absolute;
+    left: 0%;
+    right: 76.25%;
+    top: 7.65%;
+    bottom: -7.03%;
 }
-
-.App-link {
-  color: #61dafb;
+.no_q_text {
+    position: absolute;
+    height: 22px;
+    left: 72px;
+    right: 70px;
+    top: 30px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #D6D6D6;
 }
+.sidebar_separator {
+    position: absolute;
+    left: 23.61%;
+    right: 76.25%;
+    top: 7.65%;
+    bottom: 0%;
+    border: 1px solid #E5E6E6;
+}
+.sidebar_question_name {
+    height: 22px;
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #555555;
+    border: none;
+}
+.sidebar_question_name_active {
+    height: 22px;
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #555555;
+    border: none;
+    color: #002CFC;
+}
+.sidebar_question_separator {
+    border: 1px solid #E5E5E5;
+}
+/* Question Layout */
+.question_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 694px;
+    margin-left: -347px;
+}
+.option_wrapper {
+    position: relative;
+    width: 695px;
+    height: 70px;
+    margin-top:24px;
+}
+.option_input {
+    width: 694px;
+    height: 40px;
+    margin-top:8px;
+    border: 1px solid #B4B4B4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    color: #555555;
+}
+.option_label {
+    position: absolute;
+    height: 19px;
+    left: 0%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #4E4E4E;
+}
+.correct_option_btn {
+    position: absolute;
+    width: 150px;
+    height: 22px;
+    left: 61.65%;
+    right: 33.93%;
+    border: none;
+    top: 0;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #32B67A;
+}
+.option_lable {
+    height: 19px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #4E4E4E;
+}
+.correct_answer_lable {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #32B67A;
+}
+.delete_option_btn {
+    position: absolute;
+    width: 109px;
+    height: 22px;
+    left: 84%;
+    right: 16%;
+    top: 0;
+    border: none;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #EF303B;
+}
+.option_input {
+    border: 1px solid #B4B4B4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #555555;
+}
+.mt {
+    margin-top:24px;
+}
+.question_title_label {
+    margin-top: 23px;
+    height: 19px;
+    margin-top:24px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #4E4E4E;
+}
+.question_title_input {
+    display: block;
+    width: 694px;
+    height: 40px;
+    margin-top: 8px;
+    border: 1px solid #B4B4B4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #555555;
+}
+.question_description_label {
+   
+    height: 19px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #4E4E4E;
+}
+input, textarea {
+    padding-top:8px;
+    padding-left:9px;
+    padding-bottom: 8px;
+    padding-right:9px;
+}
+.question_description_input {
+    display: block;
+    width: 694px;
+    height: 194px;
+    margin-top:8px;
+    border: 1px solid #B4B4B4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #555555;
+}
+.edit_question_label {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 29px;
+    /* identical to box height */
+    color: #4E4E4E;
+}
+.question_description {
+    margin-top:20px;
+}
+.add_option_btn {
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    width: 161px;
+    height: 48px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 24.5px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #002CFC;
+}
+.add_option_btn_text {
+    margin-left:8px;
+}
+.save_question_btn {
+    background: #17C37B;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 24.5px;
+    margin-top:40px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    width:93px;
+    height: 48px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+.delete_question_btn {
+    background: #EF303B;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 24.5px;
+    font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+width: 93px;
+height: 48px;
+
+color: #FFFFFF;
+margin-left: 24px;
+margin-top:40px;
 }
