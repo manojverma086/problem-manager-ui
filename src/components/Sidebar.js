@@ -1,7 +1,7 @@
 import React from "react";
 import "./../App.css";
 import emitter from './../service';
-import {QUESTIONS_GET_ALL, QUESTION_SELECT} from '../constants';
+import {QUESTIONS_GET_ALL, QUESTION_SELECT, QUESTION_ADD} from '../constants';
 
 export default class Sidebar extends React.Component {
     constructor(props) {
@@ -11,6 +11,7 @@ export default class Sidebar extends React.Component {
             selectedIndex: null
         }
         emitter.on(QUESTIONS_GET_ALL, this.getAllQuestions);
+        emitter.on(QUESTION_ADD, this.questionAddListener);
     }
     getAllQuestions = (questions) => {
         console.log("this event triggered", questions);
@@ -25,6 +26,11 @@ export default class Sidebar extends React.Component {
             selectedIndex: parseInt(e.target.value)
         });
         emitter.emit(QUESTION_SELECT, this.state.questions[e.target.value]);
+    }
+    questionAddListener = () => {
+        this.setState({
+            selectedIndex: null
+        })
     }
     render() {
         return (
